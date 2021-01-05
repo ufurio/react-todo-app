@@ -1,4 +1,4 @@
-#React ToDo App
+# React ToDo App
 
 A beginner project made using HTML, CSS and Javascript React library.
 
