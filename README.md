@@ -1,6 +1,6 @@
 # React ToDo App
 
-A beginner project made using HTML, CSS and Javascript React library.
+A simple project made using HTML, CSS and Javascript React library.
 
 ## Functions
 
