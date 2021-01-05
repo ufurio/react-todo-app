@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import classes from "./App.module.css";
 import Form from "./Components/Form/Form";
-import { AiOutlineDelete, AiOutlineEdit } from "react-icons/ai";
+import Note from "./Components/Form/Note/Note";
 
 function App() {
   const [notes, setNotes] = useState([]);
@@ -22,19 +22,14 @@ function App() {
     console.log(notes);
   };
 
-  const noteList = notes.map((notes) => {
+  const noteList = notes.map((note) => {
     return (
-      <div className={classes.Note}>
-        {notes.text}
-        <div className={classes.EditRemoveBtn}>
-          <button>
-            <AiOutlineEdit />
-          </button>
-          <button>
-            <AiOutlineDelete onClick={() => deleteNote(notes.id)} />
-          </button>
-        </div>
-      </div>
+      <Note
+        key={note.id}
+        id={note.id}
+        text={note.text}
+        deleteNote={deleteNote}
+      />
     );
   });
 
