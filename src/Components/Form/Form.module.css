@@ -1,0 +1,40 @@
+.InputContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.InputForm {
+  display: flex;
+  margin: 1.5rem;
+  height: 2.5rem;
+}
+
+.InputForm input {
+  width: 25rem;
+  padding: 0.5rem;
+  border: none;
+}
+
+.InputForm button:focus,
+.InputForm input:focus {
+  outline: none;
+}
+
+.InputForm button {
+  font-size: 25px;
+  color: #e7e7de;
+  width: 3rem;
+  border: none;
+  margin: 0 0.5rem;
+  border-radius: 0.2rem;
+  background: linear-gradient(145deg, #10335d, #0e2b4e);
+  box-shadow: 4px 4px 8px #0d2849, -4px -4px 8px #113865;
+}
+
+.InputForm button:hover {
+  cursor: pointer;
+  color: #0f3057;
+  background: #e7e7de;
+  box-shadow: inset 4px 4px 8px #c2c2ba, inset -4px -4px 8px #ffffff;
+}
