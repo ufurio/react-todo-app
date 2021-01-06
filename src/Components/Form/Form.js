@@ -1,10 +1,8 @@
-import React, { useState } from "react";
+import React from "react";
 import classes from "./Form.module.css";
 import { AiOutlineFileAdd } from "react-icons/ai";
 
-function Form({ onSubmit, handleFilter }) {
-  const [input, setInput] = useState("");
-
+function Form({ onSubmit, handleFilter, input, setInput }) {
   const handleSubmit = (e) => {
     e.preventDefault();
     onSubmit({
@@ -35,7 +33,7 @@ function Form({ onSubmit, handleFilter }) {
         <select onChange={handleFilter}>
           <option value="all">All</option>
           <option value="completed">Completed</option>
-          <option value="uncompleted">Uncompleted</option>
+          <option value="unCompleted">Uncompleted</option>
         </select>
       </form>
     </div>
