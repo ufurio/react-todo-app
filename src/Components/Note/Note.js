@@ -1,12 +1,12 @@
 import React from "react";
-import classes from "./Note.module.css";
+import "./Note.css";
 import { AiOutlineDelete, AiOutlineCheckSquare } from "react-icons/ai";
 
-function Note({ id, text, deleteNote, handleStatus }) {
+function Note({ id, text, deleteNote, handleStatus, isCompleted }) {
   return (
-    <div className={classes.Note}>
-      {text}
-      <div className={classes.EditRemoveBtn}>
+    <div className="Note">
+      <h2 className={`text ${isCompleted ? "Completed" : ""}`}>{text}</h2>
+      <div className="EditRemoveBtn">
         <button>
           <AiOutlineCheckSquare onClick={() => handleStatus(id)} />
         </button>

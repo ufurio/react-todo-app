@@ -51,6 +51,7 @@ function App() {
         key={note.id}
         id={note.id}
         text={note.text}
+        isCompleted={note.isCompleted}
         deleteNote={deleteNote}
         handleStatus={handleStatus}
       />

@@ -49,3 +49,8 @@
 .Note:hover {
   background: #e7e7de;
 }
+
+.Completed {
+  text-decoration: line-through;
+  opacity: 0.5;
+}
