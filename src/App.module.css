@@ -1,18 +1,11 @@
 .MainContainer {
-	display: flex;
-	flex-direction: column;
-	padding: 0.5rem;
-	font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	text-align: center;
-	color: #e7e7de;
-}
-
-.NoteContainer {
-	margin: auto;
-	display: flex;
-	justify-content: center;
-	flex-wrap: wrap;
+    display: flex;
+    flex-direction: column;
+    padding: 0.5rem;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    color: #e7e7de;
 }
