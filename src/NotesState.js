@@ -31,6 +31,13 @@ const NotesState = (props) => {
         });
     };
 
+    const handleStatus = (id) => {
+        return dispatch({
+            type: actionTypes.HANDLE_STATUS,
+            payload: id,
+        });
+    };
+
     return (
         <NotesContext.Provider
             value={{
@@ -38,6 +45,7 @@ const NotesState = (props) => {
                 addNote,
                 deleteNote,
                 updateNote,
+                handleStatus,
             }}
         >
             {props.children}

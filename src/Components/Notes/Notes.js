@@ -4,7 +4,8 @@ import Note from "../Note/Note";
 import NotesContext from "../../NotesContext";
 
 function Notes() {
-    const { notes, deleteNote, updateNote } = useContext(NotesContext);
+    const { notes, deleteNote, updateNote, handleStatus } =
+        useContext(NotesContext);
     return (
         <div className={classes.NotesContainer}>
             {notes.map((note) => {
@@ -14,6 +15,7 @@ function Notes() {
                         note={note}
                         deleteNote={deleteNote}
                         updateNote={updateNote}
+                        handleStatus={handleStatus}
                     />
                 );
             })}

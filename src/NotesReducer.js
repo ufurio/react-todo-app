@@ -5,6 +5,7 @@ const NotesReducer = (state, action) => {
         case actionTypes.ADD_NOTE:
             return { ...state, notes: [...state.notes, action.payload] };
         case actionTypes.DELETE_NOTE:
+            console.log(action.payload);
             const newNotes = state.notes.filter(
                 (note) => note.id !== action.payload
             );
@@ -13,8 +14,18 @@ const NotesReducer = (state, action) => {
             return {
                 ...state,
                 notes: state.notes.map((note) =>
-                    note.id === action.payload.updatedNote.id
+                    note.id === action.payload.id
                         ? { ...note, body: action.payload.updatedNote.body }
+                        : note
+                ),
+            };
+        case actionTypes.HANDLE_STATUS:
+            console.log(action.payload);
+            return {
+                ...state,
+                notes: state.notes.map((note) =>
+                    note.id === action.payload
+                        ? { ...note, isCompleted: !note.isCompleted }
                         : note
                 ),
             };
